@@ -40,11 +40,15 @@ description: Use when … (gatilhos claros; isso decide se o agente abre a skill
 
 ```
 cursor-config/
-  user-rules.md     → colar em Cursor Settings → Rules → User Rules
-  rules/*.mdc       → ~/.cursor/rules/
-  skills/*/SKILL.md → ~/.cursor/skills/
+  user-rules.md              → colar em Cursor Settings → Rules → User Rules
+  rules/*.mdc                → ~/.cursor/rules/
+  skills/*/SKILL.md          → ~/.cursor/skills/          (skills pessoais)
+  agents-skills/*/SKILL.md   → ~/.agents/skills/          (Matt Pocock: /grill-me, tdd, …)
+  agents-skills/.skill-lock.json
   install.sh
 ```
+
+Origem das skills em `agents-skills/`: [mattpocock/skills](https://github.com/mattpocock/skills) (snapshot local; inclui `grill-me`, `grilling`, `tdd`, `pr`, `setup-matt-pocock-skills`, etc.).
 
 Não versionar: tokens, `.env`, senhas, `state.vscdb`, histórico de chat.
 
@@ -56,8 +60,16 @@ cd ~/Projetos/cursor-config
 ./install.sh
 ```
 
+Se já existir instalação antiga e quiser religar tudo a este repo:
+
+```bash
+./install.sh --force
+```
+
 Depois: abra **Cursor Settings → Rules → User Rules** e cole o conteúdo de `user-rules.md` (a UI de User Rules não é um arquivo local confiável; o markdown é a fonte portátil).
 
 ## Atualizar
 
-Edite neste repo → `git push` → na outra máquina `git pull && ./install.sh`.
+Edite neste repo → `git push` → na outra máquina `git pull && ./install.sh` (use `--force` se precisar sobrescrever links antigos).
+
+Para puxar updates oficiais do Matt de novo no futuro: reinstale pelo plugin/`npx` dele e depois sincronize de volta para `agents-skills/` neste repo.
