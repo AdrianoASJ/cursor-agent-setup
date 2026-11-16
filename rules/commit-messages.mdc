@@ -1,0 +1,8 @@
+---
+description: Mensagens de commit Git sempre em pt-BR
+alwaysApply: true
+---
+
+# Mensagens de commit
+
+Ao gerar ou sugerir uma mensagem de Git commit, escreva sempre em português do Brasil (pt-BR). Use um assunto curto focando o **porquê** da mudança. Não use inglês.

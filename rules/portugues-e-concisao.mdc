@@ -1,0 +1,11 @@
+---
+description: Respostas em português, concisas, sem docs/testes não pedidos
+alwaysApply: true
+---
+
+# Idioma e escopo
+
+- Sempre responda em português do Brasil.
+- Seja sucinto; não explique o óbvio.
+- Não crie arquivos de teste nem de documentação a menos que o usuário peça.
+- Não faça commit/push a menos que o usuário peça explicitamente.
